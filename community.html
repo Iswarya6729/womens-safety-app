@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — SafeHer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="logo-shield">🛡️</span><span class="logo-text">SafeHer</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="features.html" class="nav__link">Features</a></li>
+        <li><a href="sos.html" class="nav__link">SOS</a></li>
+        <li><a href="community.html" class="nav__link active">Community</a></li>
+        <li><a href="resources.html" class="nav__link">Resources</a></li>
+      </ul>
+      <a href="sos.html" class="btn btn--danger nav__cta">🚨 SOS</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="features.html" class="nav__link">Features</a>
+      <a href="sos.html" class="nav__link">SOS</a>
+      <a href="community.html" class="nav__link">Community</a>
+      <a href="resources.html" class="nav__link">Resources</a>
+    </div>
+  </nav>
+
+  <div class="community-page">
+    <div class="container">
+      <div class="section-header" style="margin-top:2rem">
+        <span class="eyebrow">🤝 Community Safety</span>
+        <h1 class="section-title">Together We're Safer</h1>
+        <p class="section-sub">Report unsafe areas, find safe spots, and help other women navigate safely. Every report helps the community.</p>
+      </div>
+
+      <!-- Stats Bar -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem">
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:1.25rem;border:1.5px solid var(--gray-100);text-align:center">
+          <div style="font-size:1.8rem;font-weight:800;color:var(--purple-600)">2,847</div>
+          <div style="font-size:0.78rem;color:var(--gray-500);font-weight:600">Community Reports</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:1.25rem;border:1.5px solid var(--gray-100);text-align:center">
+          <div style="font-size:1.8rem;font-weight:800;color:var(--teal-600)">342</div>
+          <div style="font-size:0.78rem;color:var(--gray-500);font-weight:600">Safe Zones Marked</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:1.25rem;border:1.5px solid var(--gray-100);text-align:center">
+          <div style="font-size:1.8rem;font-weight:800;color:var(--pink-600)">12,400+</div>
+          <div style="font-size:0.78rem;color:var(--gray-500);font-weight:600">Active Members</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:1.25rem;border:1.5px solid var(--gray-100);text-align:center">
+          <div style="font-size:1.8rem;font-weight:800;color:var(--orange-600)">98</div>
+          <div style="font-size:0.78rem;color:var(--gray-500);font-weight:600">Cities Covered</div>
+        </div>
+      </div>
+
+      <!-- Map + Report Side by Side -->
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:1.5rem;align-items:start;margin-bottom:2rem">
+        <!-- Map -->
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem">
+            <h2 style="font-size:1.1rem;font-weight:700;color:var(--gray-900)">🗺️ Community Safety Map</h2>
+            <div style="display:flex;gap:0.5rem">
+              <button class="map-filter-btn active" onclick="setFilter(this,'all')">All</button>
+              <button class="map-filter-btn" onclick="setFilter(this,'unsafe')">⚠️ Unsafe</button>
+              <button class="map-filter-btn" onclick="setFilter(this,'safe')">✅ Safe</button>
+              <button class="map-filter-btn" onclick="setFilter(this,'help')">🆘 Help</button>
+            </div>
+          </div>
+          <div class="map-container">
+            <div class="fake-map-grid"></div>
+            <!-- Fake map pins -->
+            <div class="map-pin" style="top:35%;left:45%" title="Safe Zone: Phoenix Mall">✅</div>
+            <div class="map-pin" style="top:55%;left:30%" title="Unsafe: Dark alley near Station">⚠️</div>
+            <div class="map-pin" style="top:40%;left:65%" title="Police Station">🚔</div>
+            <div class="map-pin" style="top:70%;left:55%" title="Safe Zone: Hospital">🏥</div>
+            <div class="map-pin" style="top:25%;left:35%" title="Unsafe: Poorly lit road">⚠️</div>
+            <div class="map-pin" style="top:60%;left:72%" title="Help offered: Volunteer">🤝</div>
+            <div class="map-pin" style="top:45%;left:20%" title="Safe Zone: 24h Store">🏪</div>
+            <div class="map-pin" style="top:80%;left:38%" title="Recent Incident Reported">🆘</div>
+            <div style="position:absolute;bottom:1rem;left:1rem;background:rgba(255,255,255,0.95);border-radius:var(--radius-md);padding:0.75rem;font-size:0.75rem;border:1px solid var(--gray-200)">
+              <div style="font-weight:700;color:var(--gray-800);margin-bottom:6px">Legend</div>
+              <div>✅ Safe Zone &nbsp; ⚠️ Unsafe Area</div>
+              <div>🆘 Incident &nbsp;&nbsp;&nbsp; 🤝 Help Available</div>
+            </div>
+            <div style="position:absolute;top:1rem;right:1rem;background:var(--purple-600);color:#fff;border-radius:var(--radius-full);padding:0.4rem 0.85rem;font-size:0.75rem;font-weight:700">Chennai, TN</div>
+          </div>
+          <div style="margin-top:0.75rem;display:flex;gap:0.75rem">
+            <button class="btn btn--outline" style="flex:1;padding:0.65rem;font-size:0.85rem" onclick="showReportModal()">
+              ➕ Report Unsafe Area
+            </button>
+            <button class="btn btn--primary" style="flex:1;padding:0.65rem;font-size:0.85rem" onclick="showSafeModal()">
+              ✅ Mark Safe Zone
+            </button>
+          </div>
+        </div>
+
+        <!-- Report Form -->
+        <div style="background:#fff;border-radius:var(--radius-xl);padding:1.5rem;border:1.5px solid var(--gray-100);position:sticky;top:90px">
+          <h3 style="font-size:1rem;font-weight:700;color:var(--gray-900);margin-bottom:1.25rem">📝 Quick Report</h3>
+          <div style="display:flex;flex-direction:column;gap:0.85rem">
+            <div>
+              <label style="font-size:0.78rem;font-weight:600;color:var(--gray-600);display:block;margin-bottom:4px">Type of Report</label>
+              <select style="width:100%;padding:0.65rem;border:1.5px solid var(--gray-200);border-radius:var(--radius-md);font-size:0.85rem;color:var(--gray-800);background:#fff;cursor:pointer">
+                <option>⚠️ Unsafe Area</option>
+                <option>✅ Safe Zone</option>
+                <option>🆘 Incident</option>
+                <option>🤝 Offering Help</option>
+                <option>💡 Safety Tip</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:0.78rem;font-weight:600;color:var(--gray-600);display:block;margin-bottom:4px">Location</label>
+              <input type="text" placeholder="Enter area or use GPS 📍" style="width:100%;padding:0.65rem;border:1.5px solid var(--gray-200);border-radius:var(--radius-md);font-size:0.85rem;color:var(--gray-800)" />
+            </div>
+            <div>
+              <label style="font-size:0.78rem;font-weight:600;color:var(--gray-600);display:block;margin-bottom:4px">Description</label>
+              <textarea rows="3" placeholder="Describe the situation..." style="width:100%;padding:0.65rem;border:1.5px solid var(--gray-200);border-radius:var(--radius-md);font-size:0.85rem;color:var(--gray-800);resize:vertical;font-family:var(--font-body)"></textarea>
+            </div>
+            <div>
+              <label style="font-size:0.78rem;font-weight:600;color:var(--gray-600);display:block;margin-bottom:4px">Time</label>
+              <select style="width:100%;padding:0.65rem;border:1.5px solid var(--gray-200);border-radius:var(--radius-md);font-size:0.85rem;color:var(--gray-800);background:#fff">
+                <option>Right now</option>
+                <option>Within last hour</option>
+                <option>A few hours ago</option>
+                <option>Yesterday</option>
+              </select>
+            </div>
+            <label style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--gray-600);cursor:pointer">
+              <input type="checkbox" checked style="accent-color:var(--purple-600)"/>
+              Submit anonymously
+            </label>
+            <button class="btn btn--primary" style="width:100%;padding:0.75rem;font-size:0.9rem" onclick="submitReport(this)">
+              Submit Report 🚀
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Reports -->
+      <div style="margin-bottom:3rem">
+        <h2 style="font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:1.25rem">📋 Recent Community Reports</h2>
+        <div class="report-grid">
+          <div class="report-card">
+            <div class="report-card__type" style="color:var(--red-600)">⚠️ Unsafe Area</div>
+            <div class="report-card__title">Dark road near Central Station</div>
+            <div class="report-card__meta">2 hours ago · Anna Nagar, Chennai</div>
+            <div style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray-600)">Poor lighting and no footpath. Avoid after 9 PM.</div>
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem">
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">👍 32 Agree</button>
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">🔗 Share</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-card__type" style="color:var(--green-600)">✅ Safe Zone</div>
+            <div class="report-card__title">Phoenix MarketCity Mall — 24h Security</div>
+            <div class="report-card__meta">5 hours ago · Velachery, Chennai</div>
+            <div style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray-600)">Well-lit, security guards, women's restrooms, good help.</div>
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem">
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">👍 87 Agree</button>
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">🔗 Share</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-card__type" style="color:var(--orange-600)">🆘 Incident</div>
+            <div class="report-card__title">Eve-teasing near bus stop</div>
+            <div class="report-card__meta">Yesterday · T. Nagar, Chennai</div>
+            <div style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray-600)">Group of men harassing women at stop. Police notified.</div>
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem">
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">👍 54 Agree</button>
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">🔗 Share</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-card__type" style="color:var(--teal-600)">🤝 Help Available</div>
+            <div class="report-card__title">Volunteer escort service at night</div>
+            <div class="report-card__meta">2 days ago · Adyar, Chennai</div>
+            <div style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray-600)">Community volunteers available 8PM–12AM for safe escort.</div>
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem">
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">👍 120 Agree</button>
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">🔗 Share</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-card__type" style="color:var(--red-600)">⚠️ Unsafe Area</div>
+            <div class="report-card__title">Underpass near Guindy station — Avoid</div>
+            <div class="report-card__meta">3 days ago · Guindy, Chennai</div>
+            <div style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray-600)">No CCTV, frequently used for illegal activity after sunset.</div>
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem">
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">👍 67 Agree</button>
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">🔗 Share</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-card__type" style="color:var(--green-600)">✅ Safe Zone</div>
+            <div class="report-card__title">Apollo Hospital — 24h Emergency</div>
+            <div class="report-card__meta">1 week ago · Greams Road, Chennai</div>
+            <div style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray-600)">Safe shelter, medical help, and police contact available.</div>
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem">
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">👍 201 Agree</button>
+              <button style="font-size:0.75rem;padding:4px 10px;border-radius:var(--radius-full);border:1px solid var(--gray-200);background:transparent;cursor:pointer;color:var(--gray-600)">🔗 Share</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+  .map-filter-btn {
+    padding: 6px 14px; border-radius: var(--radius-full);
+    border: 1.5px solid var(--gray-200); background: #fff;
+    font-size: 0.78rem; font-weight: 600; cursor: pointer;
+    color: var(--gray-600); transition: all 0.2s;
+  }
+  .map-filter-btn:hover, .map-filter-btn.active {
+    background: var(--purple-50); border-color: var(--purple-400); color: var(--purple-700);
+  }
+  </style>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div style="display:flex;align-items:center;gap:8px"><span class="logo-shield">🛡️</span><span class="logo-text">SafeHer</span></div>
+        <p>A community safety project for women everywhere.</p>
+        <p class="footer__tagline">Built with 💜 for every woman</p>
+      </div>
+      <div class="footer__col"><h4>App</h4><a href="index.html">Home</a><a href="features.html">Features</a><a href="sos.html">SOS Panel</a></div>
+      <div class="footer__col"><h4>Community</h4><a href="community.html">Community</a><a href="resources.html">Resources</a></div>
+      <div class="footer__col"><h4>Emergency</h4><a href="tel:112">📞 Police: 112</a><a href="tel:1091">📞 Women: 1091</a><a href="tel:181">📞 Helpline: 181</a></div>
+    </div>
+    <div class="footer__bottom"><p>© 2024 SafeHer Community Project · Open Source · Made in India with 💜</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  function setFilter(btn, type) {
+    document.querySelectorAll('.map-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  function submitReport(btn) {
+    btn.textContent = '✅ Report Submitted!';
+    btn.style.background = 'var(--green-600)';
+    setTimeout(() => { btn.textContent = 'Submit Report 🚀'; btn.style.background = ''; }, 3000);
+  }
+  </script>
+</body>
+</html>

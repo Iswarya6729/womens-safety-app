@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeHer — Women's Safety App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-shield">🛡️</span>
+        <span class="logo-text">SafeHer</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link active">Home</a></li>
+        <li><a href="features.html" class="nav__link">Features</a></li>
+        <li><a href="sos.html" class="nav__link">SOS</a></li>
+        <li><a href="community.html" class="nav__link">Community</a></li>
+        <li><a href="resources.html" class="nav__link">Resources</a></li>
+      </ul>
+      <a href="sos.html" class="btn btn--danger nav__cta pulse-ring">SOS Help</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="features.html" class="nav__link">Features</a>
+      <a href="sos.html" class="nav__link">SOS</a>
+      <a href="community.html" class="nav__link">Community</a>
+      <a href="resources.html" class="nav__link">Resources</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg-blobs">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="blob blob--3"></div>
+    </div>
+    <div class="container hero__inner">
+      <div class="hero__badge animate-in">
+        <span class="badge badge--pink">🌸 Community Safety Project</span>
+      </div>
+      <h1 class="hero__title animate-in delay-1">
+        Every woman deserves to feel<br/>
+        <span class="gradient-text">safe, heard & protected.</span>
+      </h1>
+      <p class="hero__sub animate-in delay-2">
+        SafeHer is a community-driven safety platform built by women, for women. 
+        Instant SOS alerts, trusted contacts, safe routes, and a support network — 
+        all in one place.
+      </p>
+      <div class="hero__actions animate-in delay-3">
+        <a href="sos.html" class="btn btn--primary btn--lg">
+          🚨 Open SOS Panel
+        </a>
+        <a href="features.html" class="btn btn--outline btn--lg">
+          Explore Features →
+        </a>
+      </div>
+      <div class="hero__stats animate-in delay-4">
+        <div class="stat">
+          <span class="stat__num">50K+</span>
+          <span class="stat__label">Women Protected</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">120+</span>
+          <span class="stat__label">Cities Active</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">24/7</span>
+          <span class="stat__label">Live Support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating phone mockup -->
+    <div class="hero__phone animate-float">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-status">9:41 · SafeHer</div>
+          <div class="phone-hero-ui">
+            <div class="phone-sos-btn">
+              <div class="sos-ring sos-ring--outer"></div>
+              <div class="sos-ring sos-ring--mid"></div>
+              <div class="sos-btn-core">SOS</div>
+            </div>
+            <p class="phone-sos-label">Hold 2 sec to activate</p>
+            <div class="phone-chips">
+              <div class="chip chip--green">✅ Trusted Contacts: 3</div>
+              <div class="chip chip--blue">📍 Location Shared</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACTIONS -->
+  <section class="quick-actions">
+    <div class="container">
+      <div class="quick-actions__grid">
+        <a href="sos.html" class="qa-card qa-card--red">
+          <div class="qa-card__icon">🆘</div>
+          <div class="qa-card__text">
+            <strong>Emergency SOS</strong>
+            <span>Alert contacts instantly</span>
+          </div>
+          <div class="qa-card__arrow">→</div>
+        </a>
+        <a href="features.html#safe-walk" class="qa-card qa-card--purple">
+          <div class="qa-card__icon">🗺️</div>
+          <div class="qa-card__text">
+            <strong>Safe Walk Mode</strong>
+            <span>Share live route</span>
+          </div>
+          <div class="qa-card__arrow">→</div>
+        </a>
+        <a href="community.html" class="qa-card qa-card--teal">
+          <div class="qa-card__icon">🤝</div>
+          <div class="qa-card__text">
+            <strong>Community</strong>
+            <span>Report & warn others</span>
+          </div>
+          <div class="qa-card__arrow">→</div>
+        </a>
+        <a href="resources.html" class="qa-card qa-card--pink">
+          <div class="qa-card__icon">📚</div>
+          <div class="qa-card__text">
+            <strong>Resources</strong>
+            <span>Helplines & support</span>
+          </div>
+          <div class="qa-card__arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES GRID -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title">Built for every situation<br/>you might face</h2>
+        <p class="section-sub">From late-night commutes to everyday situations — SafeHer has a feature for every moment.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card feature-card--large">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--red">🚨</div>
+          <h3>One-Tap SOS Alert</h3>
+          <p>Instantly send your GPS location, a distress message, and an audio clip to your trusted contacts and local authorities. Works even without internet.</p>
+          <a href="sos.html" class="feature-link">Try SOS Panel →</a>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--purple">📍</div>
+          <h3>Live Location Sharing</h3>
+          <p>Let chosen contacts track your journey in real-time until you mark yourself safe.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--teal">🎙️</div>
+          <h3>Discreet Recording</h3>
+          <p>Silently record audio and video in the background, automatically backed up to cloud.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--blue">🛡️</div>
+          <h3>Safe Route Planner</h3>
+          <p>AI-powered routes that avoid high-risk zones, with crowd-sourced safety ratings.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--pink">👥</div>
+          <h3>Trusted Circle</h3>
+          <p>Add up to 10 emergency contacts who receive real-time alerts and can see your location.</p>
+        </div>
+        <div class="feature-card feature-card--large">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--orange">🌐</div>
+          <h3>Community Heatmap</h3>
+          <p>See community-reported unsafe areas, incidents, and safe spots on a live map. Contribute by marking safe zones, reporting suspicious activity, or sharing resources for others.</p>
+          <a href="community.html" class="feature-link">View Community →</a>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--green">📞</div>
+          <h3>Helpline Directory</h3>
+          <p>Curated database of women's helplines, shelters, and legal aid — by city.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap feature-card__icon-wrap--yellow">📋</div>
+          <h3>Incident Logger</h3>
+          <p>Document incidents with time, location, photos and notes for legal purposes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Simple & Fast</span>
+        <h2 class="section-title">How SafeHer works</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <div class="step__content">
+            <h3>Set up your circle</h3>
+            <p>Add trusted contacts — family, friends, or neighbors — who will be alerted in an emergency.</p>
+          </div>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <div class="step__content">
+            <h3>Enable safe walk</h3>
+            <p>Before heading out, activate Safe Walk mode. Your contacts can follow your route live.</p>
+          </div>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <div class="step__content">
+            <h3>Press SOS if needed</h3>
+            <p>One tap triggers alerts to all contacts, shares your location, and starts recording.</p>
+          </div>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">04</div>
+          <div class="step__content">
+            <h3>Get connected to help</h3>
+            <p>Real-time notifications connect you to nearby volunteers, helplines, and support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Real Stories</span>
+        <h2 class="section-title">Women who felt the difference</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">"</div>
+          <p>SafeHer's SOS feature alerted my family instantly when I was followed home late at night. I feel so much safer now.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: var(--pink-200)">P</div>
+            <div>
+              <strong>Priya S.</strong>
+              <span>Chennai, Tamil Nadu</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-card__quote">"</div>
+          <p>As a night-shift nurse, I use the live location feature every single day. My husband can see I'm safe on my walk to the parking lot.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: var(--purple-200)">R</div>
+            <div>
+              <strong>Raveena M.</strong>
+              <span>Bangalore, Karnataka</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__quote">"</div>
+          <p>The community heatmap showed me which routes to avoid in my new city. This app should be on every woman's phone.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: var(--teal-200)">A</div>
+            <div>
+              <strong>Anjali K.</strong>
+              <span>Mumbai, Maharashtra</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-blob"></div>
+        <h2>Join 50,000+ women<br/>making their world safer</h2>
+        <p>SafeHer is free, open-source, and community-driven. No ads. No tracking. Just safety.</p>
+        <div class="cta-actions">
+          <a href="sos.html" class="btn btn--white btn--lg">🚨 Open SOS Panel</a>
+          <a href="community.html" class="btn btn--outline-white btn--lg">Join Community →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo-shield">🛡️</span>
+        <span class="logo-text">SafeHer</span>
+        <p>A community safety project for women everywhere.</p>
+        <p class="footer__tagline">Built with 💜 for every woman</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>App</h4>
+          <a href="index.html">Home</a>
+          <a href="features.html">Features</a>
+          <a href="sos.html">SOS Panel</a>
+        </div>
+        <div class="footer__col">
+          <h4>Community</h4>
+          <a href="community.html">Community</a>
+          <a href="resources.html">Resources</a>
+          <a href="resources.html#helplines">Helplines</a>
+        </div>
+        <div class="footer__col">
+          <h4>Emergency</h4>
+          <a href="tel:112">📞 Police: 112</a>
+          <a href="tel:1091">📞 Women: 1091</a>
+          <a href="tel:181">📞 Helpline: 181</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2024 SafeHer Community Project · Open Source · Made in India with 💜</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
